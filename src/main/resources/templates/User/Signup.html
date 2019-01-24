@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Signup</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="all.css">
+</head>
+<body>
+    <nav class="navbar">
+            <div>
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact Us</a>
+                    </li>
+                    <li>
+                    	<a href="/Signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<Form action="#" th:action="@{/Signup}" th:object="${user}" method="post">
+	<table>
+		<tr>
+			<td>User-name: </td>
+			<td><input type="text" th:field="*{userName}"></td>
+		</tr>
+		<tr>
+			<td>Password: </td>
+			<td><input type="password" th:field="*{passWord}"></td>
+		</tr>
+		<tr>
+			<td><button type="submit">Submit Your Name</button></td>
+		</tr>
+	</table>
+</Form>
+</body>
+</html>
